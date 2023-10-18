@@ -1,0 +1,3 @@
+cargo flash --release --chip STM32F401CCUx
+дебаг f5
+cargo run --bin r_solar --release

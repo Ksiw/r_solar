@@ -1,0 +1,42 @@
+/*{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "Debug (stlink)",
+            "servertype": "stlink",
+            "cwd": "${workspaceRoot}",
+            "executable": ".target/thumbv7em-none-eabihf/debug/r_solar",
+            "interface": "swd",
+            "device": "STM32F401CCUx",
+            "svdFile": "${workspaceRoot}/STM32F401.svd",
+            "configFiles": [
+                "interface/stlink-v2-1.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "runToMain": true
+        }
+    ]
+}*/
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "stlink",
+            "cwd": "${workspaceRoot}",
+            "executable": "./target/thumbv7em-none-eabihf/debug/r_solar",
+            "name": "Debug (stlink)",
+            "device": "STM32F401",
+            "svdFile": "${workspaceRoot}/STM32F401.svd",
+            "preLaunchTask": "Cargo build",
+            "configFiles": [
+                "interface/stlink-v2-1.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "runToMain": true
+        }
+    ]
+}
